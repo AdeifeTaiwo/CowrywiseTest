@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CowrywiseTest</string>
+    <string name="currency">Currency</string>
+    <string name="calculator_text">\nCalculator</string>
+    <string name="mid_market_exchange_rate_at_13_38_utc">Mid Market Exchange rate at 13:38 UTC</string>
+    <string name="search_currencies">Search Currencies</string>
+    <string name="select_currency">Select Currency</string>
+    <string name="oops_something_went_wrong">Oops!!!, something went wrong</string>
+</resources>

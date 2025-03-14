@@ -1,6 +1,5 @@
 package com.example.cowrywisetest.components
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -46,6 +45,15 @@ import com.example.cowrywisetest.ui.theme.CowryWiseGray
 import com.example.cowrywisetest.ui.theme.CowryWiseGreen
 import com.example.cowrywisetest.ui.theme.SansTypography
 
+
+/**
+ *
+ * This Composable [CurrencySelector] is used to select a currency to be converted from the list of other currency
+ * @param currencyList - list of currency list to be selected from
+ * @param selectedCurrency - selected currency from callback or default selection of "EUR"
+ * @param selectedCurrencyFlag - selected currency flag from callback or default selection of "EUR" flag
+ * @param onCurrencySelected - callback with return the data class [CurrencySelectionSheet] of the newly selected currency item [CurrencyNameWithRate]
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CurrencySelector(
@@ -122,7 +130,12 @@ fun CurrencySelector(
 }
 
 
-@OptIn(ExperimentalFoundationApi::class)
+/**
+ * [CurrencySelectionSheet] is a bottom to display the list of currencies and also use a callback to return the selected currency
+ * @param currencyList - list of all currency name and rate
+ * @param onCurrencySelected - callback with return the data class [CurrencySelectionSheet] of the newly selected currency item [CurrencyNameWithRate]
+ *
+ */
 @Composable
 fun CurrencySelectionSheet(
     currencyList: List<CurrencyNameWithRate>,

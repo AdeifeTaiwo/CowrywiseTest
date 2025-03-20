@@ -30,6 +30,15 @@ import androidx.compose.ui.unit.sp
 import com.example.cowrywisetest.ui.theme.SansTypography
 
 
+/**
+ * [CowryWiseTestTextField] is a field,
+ * @param value - the value to be shown on the text field
+ * @param onValueChange - a callback to return the typed text
+ * @param singleLine - a boolean value to make[TextField] single line or multiline
+ * @param isReadOnly - a boolean value to make the [TextField] read only or not
+ * @param keyboardType - this is the [KeyboardType] to be used in the text field
+ * @param trailingIcon - a composable to be shown on the [TextField] trailing icon
+ */
 @Composable
 fun CowryWiseTestTextField(
     value: String = "",

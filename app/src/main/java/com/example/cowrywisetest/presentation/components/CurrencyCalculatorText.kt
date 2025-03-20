@@ -20,7 +20,9 @@ import com.example.cowrywisetest.ui.theme.CowryWiseGreen
 import com.example.cowrywisetest.ui.theme.CowryWiseMidBlue
 import com.example.cowrywisetest.ui.theme.SansTypography
 
-
+/**
+ * This is a Composable Text that is the used to show the Headline Text in the app
+ */
 @Composable
 fun CurrencyCalculatorText() {
     Column(modifier = Modifier.padding(vertical = 40.dp)) {

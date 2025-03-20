@@ -1,5 +1,6 @@
 package com.example.cowrywisetest.utils
 
+
 enum class StringAnnotationTag {
     MARKET_LINK,
 }

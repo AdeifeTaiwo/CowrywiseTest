@@ -33,6 +33,12 @@ import com.example.cowrywisetest.ui.theme.SansTypography
 import com.example.cowrywisetest.utils.StringAnnotationTag
 
 
+/**
+ * @param text this is a clickable [AnnotatedString] text that can can be clicked
+ * @param textColor  this is the color of the text to be displayed
+ * @param showInfoIcon  this is a boolean to  show an optional info icon
+ */
+
 @Composable
 fun ClickableTextWithLink(
     modifier: Modifier = Modifier,

@@ -40,6 +40,9 @@ import com.example.cowrywisetest.utils.GraphType
 import kotlin.math.abs
 import kotlin.math.pow
 
+/**
+ * this Composable is used draw the Market Graph, it also shows a moveable Marker
+ */
 @Composable
 fun SmoothGraphWithMovableMarker(
     selectedGraphType: String = GraphType.THIRTY_DAYS.value

@@ -54,13 +54,7 @@ import kotlin.math.PI
 @Composable
 fun CowrywiseCustomLoader(pulseFraction: Float = 1.2f, content: @Composable () -> Unit) {
 
-   // val systemUiController: SystemUiController = rememberSystemUiController()
-   // systemUiController.isStatusBarVisible = false // Status bar
 
-    //systemUiController.isNavigationBarVisible = false // Navigation bar
-    //systemUiController.isSystemBarsVisible = false // Status & Navigation bars
-   // systemUiController.systemBarsBehavior =
-    //    WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     val infiniteTransition = rememberInfiniteTransition()
 
     val scale by infiniteTransition.animateFloat(
@@ -87,6 +81,7 @@ fun CowrywiseCustomLoader(pulseFraction: Float = 1.2f, content: @Composable () -
             content()
             val showLoader = remember{ mutableStateOf(true) }
             LaunchedEffect(key1 = Unit, block = {
+                //add loading delay when its loading too fast
                 delay(4000)
 
             })
@@ -125,10 +120,7 @@ fun CircularProgressbar(
     foregroundIndicatorColor: Color = Color.Red,
     backgroundIndicatorColor: Color = CowryWiseBlue, numberR: Float = 10f
 ) {
-    // It remembers the number value
-    // var numberR by remember {
-    // mutableStateOf(70f)
-    // }
+
     val RotationsPerCycle = 5
     // Each rotation is 1 and 1/3 seconds, but 1332ms divides more evenly
     val RotationDuration = 1332

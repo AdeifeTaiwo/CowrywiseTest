@@ -27,6 +27,11 @@ import com.example.cowrywisetest.ui.theme.CowryWiseGreen
 import com.example.cowrywisetest.ui.theme.CowrywiseTestTheme
 import com.example.cowrywisetest.ui.theme.SansTypography
 
+/**
+ * Standard Top app bar to show signup button and menu button on the left side
+ * @param onClickMenuIcon - this is a callback when you click menu icon
+ * @param onClickSignUp - this is a callback when you click the signup button
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppBarGreen(
@@ -80,7 +85,11 @@ fun AppBarGreen(
     )
 }
 
-
+/**
+ * An Alternative Top app bar to show signup button and menu button on the left side
+ * @param onClickMenuIcon - this is a callback when you click menu icon
+ * @param onClickSignUp - this is a callback when you click the signup button
+ */
 @Composable
 fun CowrywiseTopAppBar(
     onClickMenuIcon: () -> Unit,

@@ -30,10 +30,14 @@ import com.example.cowrywisetest.ui.theme.CowryWiseLightBlue
 import com.example.cowrywisetest.ui.theme.SansTypography
 import com.example.cowrywisetest.utils.GraphType
 
+/**
+ * This is a mini tab used to select the Graph Type [GraphType]
+ * This Composable shows Two item that can be selected and switched
+ * @param onGraphSelectionAction - this return the graph that was selected
+ */
 @Composable
 fun GraphTypeSelector(
     modifier: Modifier = Modifier,
-    selectedGraphType: String = GraphType.THIRTY_DAYS.value,
     onGraphSelectionAction : (String)-> Unit
 ){
     val options = listOf("Past 30 days", "Past 90 days")

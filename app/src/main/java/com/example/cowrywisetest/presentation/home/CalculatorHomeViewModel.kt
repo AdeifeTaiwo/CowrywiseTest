@@ -64,5 +64,4 @@ class  CalculatorHomeViewModel @Inject constructor(
                 }
         }
     }
-
 }

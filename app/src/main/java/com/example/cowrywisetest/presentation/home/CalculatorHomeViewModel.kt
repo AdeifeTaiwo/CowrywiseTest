@@ -2,7 +2,7 @@ package com.example.cowrywisetest.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cowrywisetest.domain.usecase.CurrencyCalcUseCase
+import com.example.cowrywisetest.domain.usecase.CurrencyCalculatorUseCase
 import com.example.cowrywisetest.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class  CalculatorHomeViewModel @Inject constructor(
-    private val currencyCalcUseCase: CurrencyCalcUseCase
+    private val currencyCalculatorUseCase: CurrencyCalculatorUseCase
 ) : ViewModel() {
 
     private var _currencyCalculatorState = MutableStateFlow(CurrencyCalculatorState())
@@ -26,7 +26,7 @@ class  CalculatorHomeViewModel @Inject constructor(
 
     private fun initCurrencyRateList() {
         viewModelScope.launch {
-            currencyCalcUseCase.getCurrencyRates(forceFetchRemote = true)
+            currencyCalculatorUseCase.getCurrencyRates(forceFetchRemote = true)
                 .collectLatest { result ->
                     when (result) {
                         is Resource.Success -> {
@@ -38,7 +38,6 @@ class  CalculatorHomeViewModel @Inject constructor(
                                     )
                                 }
                             }
-
                         }
 
                         is Resource.Error -> {
@@ -50,6 +49,7 @@ class  CalculatorHomeViewModel @Inject constructor(
                                 )
                             }
                         }
+
                         is Resource.Loading -> {
                             _currencyCalculatorState.update {
                                 it.copy(

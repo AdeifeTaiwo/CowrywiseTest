@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.example.cowrywisetest.data.local.database.CurrencyRateDatabase
 import com.example.cowrywisetest.data.remote.CurrencyCalculatorApi
 import com.example.cowrywisetest.domain.repository.CurrencyCalculatorRepository
-import com.example.cowrywisetest.domain.usecase.CurrencyCalcUseCase
+import com.example.cowrywisetest.domain.usecase.CurrencyCalculatorUseCase
 import com.example.cowrywisetest.domain.usecase.GetCurrencyRates
 import com.example.cowrywisetest.domain.usecase.GetCurrencySymbols
 import dagger.Module
@@ -59,8 +59,8 @@ object AppModule {
     @Singleton
     fun providesCurrencyCalculatorUseCases(
         calculatorRepository: CurrencyCalculatorRepository,
-    ): CurrencyCalcUseCase {
-        return CurrencyCalcUseCase(
+    ): CurrencyCalculatorUseCase {
+        return CurrencyCalculatorUseCase(
             getCurrencySymbols = GetCurrencySymbols(calculatorRepository),
             getCurrencyRates = GetCurrencyRates(calculatorRepository),
 

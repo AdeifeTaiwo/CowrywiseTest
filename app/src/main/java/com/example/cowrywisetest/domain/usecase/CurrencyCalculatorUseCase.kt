@@ -1,6 +1,6 @@
 package com.example.cowrywisetest.domain.usecase
 
-data class CurrencyCalcUseCase(
+data class CurrencyCalculatorUseCase(
     val getCurrencyRates: GetCurrencyRates,
     val getCurrencySymbols: GetCurrencySymbols
 )

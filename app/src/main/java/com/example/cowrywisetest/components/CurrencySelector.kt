@@ -49,10 +49,10 @@ import com.example.cowrywisetest.ui.theme.SansTypography
 /**
  *
  * This Composable [CurrencySelector] is used to select a currency to be converted from the list of other currency
- * @param currencyList - list of currency list to be selected from
- * @param selectedCurrency - selected currency from callback or default selection of "EUR"
- * @param selectedCurrencyFlag - selected currency flag from callback or default selection of "EUR" flag
- * @param onCurrencySelected - callback with return the data class [CurrencySelectionSheet] of the newly selected currency item [CurrencyNameWithRate]
+ * @param currencyList list of currency list to be selected from
+ * @param selectedCurrency selected currency from callback or default selection of "EUR"
+ * @param selectedCurrencyFlag selected currency flag from callback or default selection of EUR flag
+ * @param onCurrencySelected callback with return the data class [CurrencySelectionSheet] of the newly selected currency item [CurrencyNameWithRate]
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
